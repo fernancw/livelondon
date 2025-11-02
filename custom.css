@@ -1,0 +1,359 @@
+/* -------------------------NAVBAR------------------------ */
+
+.navbar {
+  min-height: 70px;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  transition: background-color 0.4s ease, border-color 0.4s ease;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+  box-shadow: none;
+}
+
+footer {
+  width: 100%;
+  max-width: 100%;
+  background-color: #001f3f; 
+  border-top: 4px solid #9d0005;
+}
+
+
+/* Logo adjustments */
+.navbar-brand img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #ddd !important;
+}
+
+.navbar.scrolled {
+  background-color: #fff !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+.navbar.scrolled .navbar-nav .nav-link:hover {
+  color: #555 !important;
+}
+
+/* Ensure link colors override Bootstrap when scrolled */
+.navbar.navbar-dark.scrolled .navbar-nav .nav-link {
+  color: #000 !important;
+}
+
+.navbar.navbar-dark.scrolled .navbar-nav .nav-link:hover {
+  color: #555 !important;
+}
+
+
+
+
+
+
+
+/*-------------------------- HEADER -------------------------*/
+
+/* Hero header overlay */
+.hero-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3); 
+  z-index: 0;
+}
+
+.hero-header .container {
+  position: relative;
+  z-index: 1; 
+}
+
+/* Hero header custom colors */
+.hero-title {
+  color: #c22825; 
+}
+
+.hero-subtitle {
+  color: #213796;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 3px rgba(249, 249, 249, 0.9);
+}
+
+
+
+/* ----------------------GALLERY STYLE------------------ */
+
+#londonCarousel img {
+  max-height: 900px; 
+  object-fit: cover; 
+  width: 100%;
+}
+.gallery-thumb {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gallery-thumb:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content img {
+  border-radius: 0.5rem;
+}
+
+
+
+
+
+/* --------------------ABOUT PAGE STYLE------------------ */
+
+.about-content {
+  background-color: #f9f9f9; 
+  padding: 60px 0;
+  border-radius: 8px;
+}
+
+/* Section titles */
+.about-content h2 {
+  color: #213796; 
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c22825;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Paragraph text */
+.about-content p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Lists */
+.about-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.about-content ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0.75rem;
+  color: #111;
+  font-size: 1.05rem;
+}
+
+/* Custom red bullet */
+.about-content ul li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #c22825;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.about-content section {
+  border-bottom: 1.5px solid rgba(33, 55, 150, 0.15); /* faint navy line */
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-content section:last-of-type {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 40px 0;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p,
+  .about-content ul li {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
+/*------------------- GUIDES PAGE STYLE----------------- */
+
+.guides-content {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  border-radius: 8px;
+}
+
+/* Section titles */
+.guides-content h2 {
+  color: #213796;
+  font-weight: 700;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Red underline accent */
+.guides-content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c22825;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+/* Paragraph text */
+.guides-content p {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+/* Lists */
+.guides-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.guides-content ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0.75rem;
+  color: #111;
+  font-size: 1.05rem;
+}
+
+/* Custom red bullets */
+.guides-content ul li::before {
+  content: "●";
+  position: absolute;
+  left: 0;
+  color: #c22825;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Section dividers */
+.guides-content section {
+  border-bottom: 1.5px solid rgba(33, 55, 150, 0.15);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.guides-content section:last-of-type {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .guides-content {
+    padding: 40px 0;
+  }
+
+  .guides-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .guides-content p,
+  .guides-content ul li {
+    font-size: 1rem;
+  }
+}
+
+
+/* ----------------------- CONTACT PAGE ------------------------ */
+
+.contact-intro .section-title,
+.social-section .section-title {
+  color: #001f3f; 
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: #9d0005; 
+  border: none;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Contact Form Styles */
+.contact-form {
+  background-color: #f8f9fa;
+  border-left: 5px solid #9d0005;
+}
+
+.contact-form .form-label {
+  color: #001f3f;
+}
+
+.contact-form .form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #9d0005;
+  box-shadow: 0 0 0 0.2rem rgba(157, 0, 5, 0.25);
+}
+
+.contact-form .btn-primary {
+  background-color: #9d0005;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #7a0004;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Your guide to the best of London in your 20s — nightlife, food, culture, and hidden gems."
+    />
+    <meta name="author" content="LiveLondon" />
+    <title>LiveLondon | Gallery</title>
+    <link rel="icon" type="image/x-icon" href="assets/london.png" />
+
+    <!-- Bootstrap v5.3.7 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles -->
+    <link href="custom.css" rel="stylesheet" />
+  </head>
+
+  <body id="page-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container px-4">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="assets/london.png" alt="LiveLondon logo" />
+          <span class="ms-2 fw-semibold">LiveLondon</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="guides.html">Guides</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="margin-top: 80px"></div>
+
+    <!-- Main Content -->
+    <main class="container py-5">
+      <div class="text-center mb-5">
+        <h1 class="fw-bold">Gallery</h1>
+        <p class="lead text-muted">Moments from my time abroad in London.</p>
+      </div>
+
+      <!-- Image Grid Gallery -->
+      <div class="row g-3" id="imageGallery"></div>
+
+      <!-- Modal for Enlarged Images -->
+      <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark border-0">
+            <div class="modal-body p-0">
+              <img
+                id="modalImage"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+                class="img-fluid w-100"
+                alt="Enlarged gallery image"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+      <div class="container">
+        <p class="mb-1">© 2025 LiveLondon. All Rights Reserved.</p>
+        <p class="small mb-0">
+          Explore London — for young adventurers, creatives, and city dreamers.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic Gallery Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const galleryContainer = document.getElementById("imageGallery");
+        const imageNames = [
+          "one","two","three","four","five","six","seven","eight",
+          "nine","ten","eleven","twelve","thirteen","fourteen","fifteen",
+          "sixteen","seventeen","eighteen","nineteen","twenty",
+        ];
+
+        // Generate grid thumbnails
+        imageNames.forEach((name, index) => {
+          const col = document.createElement("div");
+          col.className = "col-6 col-md-4 col-lg-3"; // Responsive layout
+          const img = document.createElement("img");
+          img.src = `assets/gallery/${name}.jpeg`;
+          img.className = "img-fluid rounded shadow-sm gallery-thumb";
+          img.alt = `Gallery image ${index + 1}`;
+          img.style.cursor = "pointer";
+          img.addEventListener("click", () => {
+            document.getElementById("modalImage").src = img.src;
+            const modal = new bootstrap.Modal(
+              document.getElementById("imageModal")
+            );
+            modal.show();
+          });
+          col.appendChild(img);
+          galleryContainer.appendChild(col);
+        });
+      });
+    </script>
+
+    <!-- Scroll Navbar -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const navbar = document.querySelector(".navbar");
+        if (!navbar) return;
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 50) navbar.classList.add("scrolled");
+          else navbar.classList.remove("scrolled");
+        });
+      });
+    </script>
+  </body>
+</html>
