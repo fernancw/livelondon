@@ -12,7 +12,7 @@
     />
     <meta name="author" content="LiveLondon" />
     <title>LiveLondon | Gallery</title>
-    <link rel="icon" type="image/x-icon" href="assets/london.png" />
+    <link rel="icon" type="image/x-icon" href="london.png" />
 
     <!-- Bootstrap v5.3.7 -->
     <link
@@ -31,7 +31,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container px-4">
         <a class="navbar-brand d-flex align-items-center" href="index.html">
-          <img src="assets/london.png" alt="LiveLondon logo" />
+          <img src="london.png" alt="LiveLondon logo" />
           <span class="ms-2 fw-semibold">LiveLondon</span>
         </a>
 
@@ -123,7 +123,7 @@
           const col = document.createElement("div");
           col.className = "col-6 col-md-4 col-lg-3"; // Responsive layout
           const img = document.createElement("img");
-          img.src = `assets/gallery/${name}.jpeg`;
+          img.src = `${name}.jpeg`;
           img.className = "img-fluid rounded shadow-sm gallery-thumb";
           img.alt = `Gallery image ${index + 1}`;
           img.style.cursor = "pointer";
